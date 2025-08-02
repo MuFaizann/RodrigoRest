@@ -162,7 +162,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 {" "}
                 {/* Ensure content is above the background overlay */}
-                <h3 className="text-3xl font-bold text-white mb-8">Customer Favorites</h3>
+                <h3 className="text-3xl font-bold text-white mb-8">Customer Favorites / lunch / dinner Selec ?</h3>
                 <div className="space-y-4 mb-12">
                   {dailySpecialsData.slice(0, 4).map((item, index) => (
                     <SpecialMenuItem
@@ -216,24 +216,24 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                image: "/images/fish-tacos.png",
-                title: "Fish Tacos",
-                description: "Fresh grilled fish with cabbage slaw and chipotle mayo",
+                image: "/images/tacoPic.avif",
+                title: "5 MINI tacos",
+                description: "5 generously filled tacos with your choice of meat, topped with fresh onions and cilantro",
                 badge: "Most Popular",
                 badgeColor: "bg-red-600",
               },
               {
-                image: "/images/carne-asada-burrito.png",
-                title: "Carne Asada Burrito",
-                description: "Grilled steak with rice, beans, and fresh guacamole",
-                badge: "Recommended",
+                image: "/images/birriaTaco.avif",
+                title: "1 Birria Taco",
+                description: "slow-stewed beef taco packed with rich flavor, folded in a golden, crispy tortilla and topped with fresh onions, cilantro, and melted cheese. ",
+                badge: "Second Most Popular",
                 badgeColor: "bg-gray-700",
               },
               {
-                image: "/images/shrimp-enchiladas.png",
-                title: "Shrimp Enchiladas",
-                description: "Succulent shrimp in corn tortillas with green tomatillo sauce",
-                badge: "Special",
+                image: "/images/carneFries.avif",
+                title: "Carne Asada Fries",
+                description: "Bed of crispy golden fries loaded with tender, grilled carne asada, topped with creamy guacamole, rich sour cream, fresh pico de gallo, and melted cheese.",
+                badge: "Third Most Popular",
                 badgeColor: "bg-yellow-600",
               },
             ].map((item, index) => (
@@ -282,70 +282,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Location & Hours */}
-      <section className="py-20 px-4 bg-gray-900 text-white relative overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-red-600/20 rounded-full opacity-40 animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-yellow-600/20 rounded-full opacity-40 animate-pulse delay-1000"></div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Visit Us <span className="text-red-400">Today</span>!
-            </h2>
-            <p className="text-xl text-gray-300">We're waiting for you in the heart of Tulsa with open arms</p>
-            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full mt-4"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="card-hover bg-gray-800 border-gray-700 shadow-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <MapPin className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-white">Location</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  1956 S Garnett Rd
-                  <br />
-                  Tulsa, OK 74128
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover bg-gray-800 border-gray-700 shadow-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Phone className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-white">Phone</h3>
-                <a href="tel:+19186055061" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
-                  (918) 605-5061
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover bg-gray-800 border-gray-700 shadow-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Clock className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-white">Hours</h3>
-                <div className="text-gray-300 text-sm">
-                  <div>Sun-Thu: 7 AM - 12 AM</div>
-                  <div>Fri-Sat: 7 AM - 2 AM</div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Button className="btn-restaurant text-lg px-8 py-4">
-            <Link href="/contact" className="flex items-center space-x-2">
-              <MapPin className="h-5 w-5" />
-              <span>Get Directions</span>
-            </Link>
-          </Button>
-        </div>
-      </section>
+      
 
       {/* Quick Map Preview */}
       <section className="py-20 px-4 bg-white">
